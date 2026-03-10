@@ -1,0 +1,9 @@
+FROM php:7.4-apache
+
+Instala extensao mysqli para conexao com MySQL
+RUN docker-php-ext-install mysqli
+
+Copia a aplicacao PHP para o container
+COPY index.php /var/www/html/
+
+EXPOSE 80
